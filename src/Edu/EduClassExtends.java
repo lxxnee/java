@@ -10,12 +10,16 @@ public class EduClassExtends {
 class Mammal {
     String Kinds;
     protected String name;
+//    final protected String name = "테스트"; // 상수
 
     public Mammal() {
         this.Kinds = "포유류";
+        // this.name = "ss"; // 상수이므로 에러
+
     }
 
-    public void printInfo() {
+    // final method : 자식 클래스에서 오버라이딩 불가능
+   public void printInfo() {
         System.out.println("Kinds: " + this.Kinds);
     }
 }
